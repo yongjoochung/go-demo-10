@@ -39,7 +39,11 @@ func testweb2() {
 
 func testsql() {
 
+<<<<<<< HEAD
 	condb, errdb := sql.Open("odbc", "DSN=dw;")
+=======
+	condb, errdb := sql.Open("odbc", "DSN=dw;Trusted_Connection=True;")
+>>>>>>> 66c708fda119c48828a70547d5f0c7d5d5c9257e
 	if errdb != nil {
 		fmt.Println(" Error open db:", errdb.Error())
 	}
@@ -49,7 +53,11 @@ func testsql() {
 		isvc int
 	)
 
+<<<<<<< HEAD
 	rows, err := condb.Query("select top 10 name,age from dbo.test")
+=======
+	rows, err := condb.Query("select top 10 namge,age from dbo.test")
+>>>>>>> 66c708fda119c48828a70547d5f0c7d5d5c9257e
 
 	if err != nil {
 
